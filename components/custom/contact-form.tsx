@@ -20,7 +20,7 @@ import {
     CardHeader,
     CardTitle
 } from '@/components/ui/card'
-import { Textarea } from '../ui/textarea'
+import { Textarea } from '@/components/ui/textarea'
 import { sendEmail } from '@/lib/send-email'
 
 interface ContactFormProps {
@@ -49,9 +49,8 @@ export function ContactForm({ closeForm }: ContactFormProps) {
     })
 
     function onSubmit(values: z.infer<typeof schema>) {
-        console.log('Email values: ', values)
         sendEmail(values)
-        closeForm
+        closeForm()
     }
 
     return (

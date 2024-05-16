@@ -5,6 +5,7 @@ import { AboutSection } from '@/components/custom/about-section'
 import { ServicesSection } from '@/components/custom/services-section'
 import { ContactSection } from '@/components/custom/contact-section'
 import { Footer } from '@/components/custom/footer'
+import Image from 'next/image'
 
 const homePageQuery = qs.stringify({
   populate: {
@@ -64,7 +65,7 @@ export default async function Home() {
   return (
     <main>
       <div className='absolute top-0 left-0 flex flex-col z-20 h-[200px]'>
-        <img alt='Fronz Media Logo' src={'http://localhost:1337' + logo.url} className='aspect-auto w-2/5 mt-4 ml-4 mb-2' />
+          <Image alt='Fronz Media Logo' width={405} height={89} src={'http://localhost:1337' + logo.url} className='aspect-auto w-2/5 mt-4 ml-4 mb-2' />
         <p className='relative text-sm ml-16' style={{color: '#CA9E40'}}>{Logo_Subtitle}</p>
       </div>
       <HeroSection data={blocks[0]} />
