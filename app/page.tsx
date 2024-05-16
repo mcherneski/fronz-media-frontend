@@ -59,7 +59,6 @@ async function getStrapiData(path: string) {
 export default async function Home() {
 
   const strapiData = await getStrapiData('/api/home-page')
-
   const { logo, Logo_Subtitle, blocks } = strapiData;
 
   return (

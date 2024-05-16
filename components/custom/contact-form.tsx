@@ -56,7 +56,7 @@ export function ContactForm({ closeForm }: ContactFormProps) {
     return (
         <Card className='fixed w-1/3 h-3/5 m-auto inset-0 z-50 text-fronzGold border-fronzBlue' style={{backgroundColor: '#151414'}}>
             <CardHeader className='relative'>
-                <CardTitle>Let's Connect!</CardTitle>
+                <CardTitle>Say Hello!</CardTitle>
                 <CardDescription>Fill out the form below to get in touch with us.</CardDescription>
                 <Button variant='default' className='absolute top-0 right-0 m-4 bg-fronzPink text-fronzGray' onClick={closeForm}>X</Button>
             </CardHeader>
