@@ -1,0 +1,77 @@
+import qs from 'qs'
+import { flattenAttributes } from '@/lib/utils'
+import { HeroSection } from '@/components/custom/hero-section'
+import { AboutSection } from '@/components/custom/about-section'
+import { ServicesSection } from '@/components/custom/services-section'
+import { ContactSection } from '@/components/custom/contact-section'
+import { Footer } from '@/components/custom/footer'
+
+const homePageQuery = qs.stringify({
+  populate: {
+    logo: {
+      fields: ['url', 'alternativeText']
+    },
+    Logo_Subtitle: {
+      populate: true
+    },
+    blocks: {
+      populate: {
+        Hero_Image: {
+          fields: ['url', 'alternativeText']
+        },
+        Hero_Header: {
+          populate: true
+        },
+        Hero_Header_Scroll: {
+          populate: true
+        },
+        About_Header: {
+          populate: true
+        },
+        About_Content: {
+          populate: true
+        },
+        Service: {
+          populate: true
+        }
+      }
+    },
+  }
+})
+
+async function getStrapiData(path: string) {
+  const baseUrl = 'http://localhost:1337'
+  const url = new URL(path, baseUrl)
+  url.search = homePageQuery
+
+  try {
+    const response = await fetch(url.href, { cache: 'no-store'})
+    const data = await response.json()
+    const flattenedData = flattenAttributes(data)
+  
+    return flattenedData
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export default async function Home() {
+
+  const strapiData = await getStrapiData('/api/home-page')
+
+  const { logo, Logo_Subtitle, blocks } = strapiData;
+
+  return (
+    <main>
+      <div className='absolute top-0 left-0 flex flex-col z-20 h-[200px]'>
+        <img alt='Fronz Media Logo' src={'http://localhost:1337' + logo.url} className='aspect-auto w-2/5 mt-4 ml-4 mb-2' />
+        <p className='relative text-sm ml-16' style={{color: '#CA9E40'}}>{Logo_Subtitle}</p>
+      </div>
+      <HeroSection data={blocks[0]} />
+      <AboutSection data={blocks[1]} />
+      <ServicesSection data={blocks[2]} />
+      <ContactSection data={blocks[3]} />
+      <Footer />
+    </main>
+  )
+}
