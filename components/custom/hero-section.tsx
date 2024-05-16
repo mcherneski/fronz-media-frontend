@@ -25,7 +25,7 @@ interface HeroSectionProps {
 
 export function HeroSection({data}: Readonly<HeroSectionProps>) {
     const {Hero_Header, Hero_Image, Hero_Header_Scroll} = data
-    const imageUrl = 'http://localhost:1337' + Hero_Image.url
+    const imageUrl = Hero_Image.url
     const [currentText, setCurrentText] = useState(Hero_Header_Scroll[0].Word)
 
     let i = 0

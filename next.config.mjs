@@ -3,9 +3,8 @@ const nextConfig = {
     images:{
         remotePatterns:[
             {
-                protocol: 'http',
-                hostname: 'localhost',
-                port: '1337'
+                protocol: 'https',
+                hostname: 'informed-captain-64ef5bbe8f.media.strapiapp.com',
             }
         ]
     }

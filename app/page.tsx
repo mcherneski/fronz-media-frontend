@@ -41,7 +41,7 @@ const homePageQuery = qs.stringify({
 })
 
 async function getStrapiData(path: string) {
-  const baseUrl = 'http://localhost:1337'
+  const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
   const url = new URL(path, baseUrl)
   url.search = homePageQuery
 
@@ -53,18 +53,20 @@ async function getStrapiData(path: string) {
     return flattenedData
   } catch (error) {
     console.error(error)
+    return {}
   }
 }
 
 export default async function Home() {
 
   const strapiData = await getStrapiData('/api/home-page')
+  if (!strapiData) { return null }
   const { logo, Logo_Subtitle, blocks } = strapiData;
 
   return (
     <main>
       <div className='absolute top-0 left-0 flex flex-col z-20 h-[200px]'>
-          <Image alt='Fronz Media Logo' width={405} height={89} src={'http://localhost:1337' + logo.url} className='aspect-auto w-2/5 mt-4 ml-4 mb-2' />
+          <Image alt='Fronz Media Logo' width={405} height={89} src={logo.url} className='aspect-auto w-2/5 mt-4 ml-4 mb-2' />
         <p className='relative text-sm ml-16' style={{color: '#CA9E40'}}>{Logo_Subtitle}</p>
       </div>
       <HeroSection data={blocks[0]} />
