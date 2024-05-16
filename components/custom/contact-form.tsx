@@ -29,11 +29,11 @@ interface ContactFormProps {
 
 const schema = z.object({
     name: z.string().min(1,{
-        message: 'Name is required!'
+        message: 'Name is required.'
     }),
     email: z.string().email(),
     message: z.string().max(500, {
-        message: 'Message must be less than 500 characters!'
+        message: 'Message must be less than 500 characters.'
     })
 })
 
