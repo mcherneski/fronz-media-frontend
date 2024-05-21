@@ -54,7 +54,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
             <div className='relative flex flex-col h-content w-full m-auto items-center justify-center text-white text-sm px-8 md:w-2/3'>
               <BlocksRenderer content={content} />
             </div>
-            <div className='h-content w-screen items-center justify-center py-8 mb-4'>
+            <div className='h-content w-screen xl:w-3/4 items-center justify-center py-8 mb-4'>
               <h3 className='text-fronzGold text-3xl text-center'>Gallery</h3>
               <div className='flex flex-row flex-wrap items-center justify-center w-full'>
               {
