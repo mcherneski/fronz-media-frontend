@@ -1,4 +1,3 @@
-
 import qs from 'qs'
 import { getStrapiData } from '@/lib/utils'
 import {
@@ -21,11 +20,6 @@ const projectsQuery = qs.stringify({
         featured: { populate: true },
         details: { populate: true },
         media: { fields: ['url', 'alternativeText'] },
-    },
-    filters: {
-        featured: {
-            $eq: true
-        }
     }
 })
 
@@ -33,6 +27,7 @@ const projectsQuery = qs.stringify({
 export default async function PortfolioPage() {
     const projects = await getStrapiData('/api/case-studies', projectsQuery)
     
+    console.log('Projects data: ', projects)
     return (
         <main className='h-screen w-screen flex flex-col items-center justify-center flex-nowrap'>
             <div className='w-full flex flex-row items-start justify-center mt-20'>
@@ -49,7 +44,8 @@ export default async function PortfolioPage() {
                             <CardContent className='w-full flex flex-col justify-center items-center'>
                                 <div className='w-full h-[200px] max-h-[500px] flex justify-center items-center overflow-hidden'>
                                     <Image 
-                                        src={'https://informed-captain-64ef5bbe8f.media.strapiapp.com' + project.media.data[0].url}
+                                        // src={'https://informed-captain-64ef5bbe8f.media.strapiapp.com' + project.media.data[0].url}
+                                        src={'http://localhost:1337' + project.media.data[0].url}
                                         alt={project.media.data[0].alternativeText} 
                                         width={300} height={300}             
                                         objectFit='cover'

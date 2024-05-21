@@ -35,7 +35,8 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
 
     const {Name, client, details, media} = projectData.data[0]
     const content: BlocksContent = details
-    const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
+    // const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
+    const imageServerPrefix = 'http://localhost:1337'
 
     return (
         <div className='flex flex-col h-screen w-screen my-32'>

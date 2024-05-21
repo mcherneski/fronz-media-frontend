@@ -48,7 +48,8 @@ export function PortfolioSection({ sectionData }: Readonly<PortfolioSectionProps
                                 <PortfolioCard
                                     name={p.Name}
                                     client={p.client}
-                                    imageUrl={'https://informed-captain-64ef5bbe8f.media.strapiapp.com' + p.media.data[0].url}
+                                    // imageUrl={'https://informed-captain-64ef5bbe8f.media.strapiapp.com' + p.media.data[0].url}
+                                    imageUrl={'http://localhost:1337' + p.media.data[0].url}
                                     linkHref={`/portfolio/${p.slug}`}
                                     description={p.short_description}
                                 />
