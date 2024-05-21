@@ -45,7 +45,8 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
               <h3 className='text-fronzBlue text-xl'>{client}</h3>
               <div className='w-full m-auto md:w-2/3'>
                 <Image 
-                  src={imageServerPrefix + media.data[0].url} alt={media.data[0].alternativeText} width={1000} height={1000} 
+                  // src={imageServerPrefix + media.data[0].url} alt={media.data[0].alternativeText} width={1000} height={1000}
+                  src={media.data[0].url} alt={media.data[0].alternativeText} width={1000} height={1000} 
                   className='px-8 py-8 m-auto'
                 />
               </div>
@@ -60,7 +61,8 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
                 media.data.map((m: any) => (
                   <Image
                     key={m.id}
-                    src={imageServerPrefix + m.url} alt={m.alternativeText} width={300} height={300}
+                    // src={imageServerPrefix + m.url} alt={m.alternativeText} width={300} height={300}
+                    src={m.url} alt={m.alternativeText} width={300} height={300}
                     className='p-2'
                   />
                 ))
