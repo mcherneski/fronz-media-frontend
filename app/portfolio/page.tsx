@@ -40,8 +40,8 @@ export default async function PortfolioPage() {
             </div>
             <div className='flex h-3/4 w-3/4 flex-row items-center justify-center flex-wrap '>
                 {
-                    projects.data.map((project) => (
-                        <Card className='w-full h-[500px] sm:w-1/3 m-4 bg-transparent text-fronzGold overflow-hidden'>
+                    projects.data.map((project: any) => (
+                        <Card key={project.Name} className='w-full h-[500px] sm:w-1/3 m-4 bg-transparent text-fronzGold overflow-hidden'>
                             <CardHeader>
                                 <CardTitle className='text-center text-lg'>{project.Name}</CardTitle>
                                 <CardDescription className='text-fronzBlue text-center text-md'>{project.client}</CardDescription>

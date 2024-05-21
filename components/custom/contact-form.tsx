@@ -66,7 +66,7 @@ export function ContactForm({ closeForm }: { closeForm: () => void }) {
     }
 
     return (
-        <ContactCard handleClose={handleClose}>
+        <ContactCard closeForm={handleClose}>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
                     <FormField

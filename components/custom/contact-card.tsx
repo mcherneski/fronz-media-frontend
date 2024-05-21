@@ -36,7 +36,12 @@ const schema = z.object({
     phoneNumber: z.string().optional()
 })
 
-export function ContactCard({ closeForm }: { closeForm: () => void }) {
+interface ContactCardProps {
+    closeForm: () => void
+    children?: React.ReactNode
+}
+
+export function ContactCard({ closeForm, children }: ContactCardProps) {
     const { toast } = useToast()
 
     const form = useForm<z.infer<typeof schema>>({

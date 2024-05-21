@@ -56,8 +56,9 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
               <h3 className='text-fronzGold text-3xl text-center'>Gallery</h3>
               <div className='flex flex-row flex-wrap items-center justify-center w-full'>
               {
-                media.data.map((m) => (
+                media.data.map((m: any) => (
                   <Image
+                    key={m.id}
                     src={imageServerPrefix + m.url} alt={m.alternativeText} width={300} height={300}
                     className='p-2'
                   />
