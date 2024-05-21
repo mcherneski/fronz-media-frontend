@@ -54,7 +54,7 @@ export function ContactForm({ closeForm }: { closeForm: () => void }) {
             closeForm()
         } catch (error) {
             toast({
-                title: 'Sorry!',
+                title: 'Oh no!',
                 description: 'There was an error sending your message.'
             })
             closeForm()
