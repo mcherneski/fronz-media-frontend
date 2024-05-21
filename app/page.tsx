@@ -29,10 +29,11 @@ async function getStrapiData(path: string) {
   url.search = projectsQuery
 
   try {
-    const response = await fetch(url.href, {cache: "no-store"})
+    const response = await fetch(url.href)
     const data = await response.json()
     const flattenedData = flattenAttributes(data)
     console.log('Flattened Data: ', flattenedData)
+
     return flattenedData
   } catch (error) {
     console.error(error)
@@ -44,12 +45,13 @@ export default async function Home() {
   const strapiData = await getStrapiData('/api/case-studies')
   if (!strapiData) { return null }
   console.log(strapiData)
+  const featured = strapiData.filter((project: any) => project.featured === true)
   
   return (
       <main className='w-screen flex flex-col'>
         <LandingSection/>
         <ServicesSection />
-        <PortfolioSection sectionData={strapiData}/>
+        <PortfolioSection sectionData={featured}/>
       </main>
   )
 }
