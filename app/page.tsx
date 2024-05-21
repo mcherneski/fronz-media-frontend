@@ -23,8 +23,8 @@ const projectsQuery = qs.stringify({
 })
 
 async function getStrapiData(path: string) {
-  // const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
-  const baseUrl = 'http://localhost:1337'
+  const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
+  // const baseUrl = 'http://localhost:1337'
   const url = new URL(path, baseUrl)
   url.search = projectsQuery
 
