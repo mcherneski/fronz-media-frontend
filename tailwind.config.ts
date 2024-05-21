@@ -18,6 +18,15 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'fronz-gradient': 'radial-gradient(circle at top left, black 0%, #01090F 85%, #4984A7 250%)',
+        'fronz-gradient-2': 'radial-gradient(circle at bottom right, #4984A7 -500%, #01090F 20%, black 100%)',
+        'fronz-gradient-center': 'radial-gradient(circle at center, black 0%, #111827 350%)',
+        'fronz-logo-glow': 'linear-gradient(to top, #111827 0%,  black 30%)',
+      },
+      dropShadow: {
+        'glow': '0 35px 35px rgba(73, 132, 167, .3)'
+      },
       fontFamily: {
         'proxima-nova-wide': ['Proxima Nova Wide', 'sans-serif'],
       },

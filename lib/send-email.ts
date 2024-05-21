@@ -1,6 +1,9 @@
 
 export function sendEmail(data: any) {
     const apiEndpoint = '/api/email';
+    const { lolgotcha } = data
+    console.log('Bot detected', lolgotcha)
+    if (lolgotcha) return false
 
   fetch(apiEndpoint, {
     method: 'POST',
@@ -8,9 +11,9 @@ export function sendEmail(data: any) {
   })
     .then((res) => res.json())
     .then((response) => {
-      alert(response.message);
+      return true
     })
     .catch((err) => {
-      alert(err);
+      return false
     });
 }
