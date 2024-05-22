@@ -66,8 +66,8 @@ export function PortfolioSection({ sectionData }: Readonly<PortfolioSectionProps
                 </Carousel>
 
             </div>
-            <div className='text-center flex flex-row items-center justify-center mb-32 z-20'>
-                    <Link href='/portfolio'><h1 className='text-2xl text-center text-fronzGold hover:border-b-2 hover:border-fronzGold'>More Case Studies</h1></Link>
+            <div className='text-center flex flex-row items-center justify-center my-32 z-20'>
+                    <Link href='/portfolio'><h1 className='text-2xl text-center text-fronzGold hover:border-b-2 hover:border-fronzGold'>View Project Gallery</h1></Link>
                 </div>
         </section>
     )
