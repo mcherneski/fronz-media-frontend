@@ -5,19 +5,10 @@ import { LandingSection } from '@/components/sections/landing-section'
 import { ServicesSection } from '@/components/sections/services-section'
 import { PortfolioSection } from '@/components/sections/portfolio-section'
 
-const projectsQuery = qs.stringify({
-  populate: {
-    Name: {populate: true},
-    client: {populate: true},
-    slug: {populate: true},
-    short_description: {populate: true},
-    featured: {populate: true},
-    details: {populate: true},
-    media: {fields: ['url', 'alternativeText']},
-  },
+const featuredProjectsQuery = qs.stringify({
   filter: {
     featured: {
-      eq: true
+      $eq: true,
     }
   }
 })
@@ -26,7 +17,7 @@ async function getStrapiData(path: string) {
   const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
   // const baseUrl = 'http://localhost:1337'
   const url = new URL(path, baseUrl)
-  url.search = projectsQuery
+  url.search = featuredProjectsQuery
 
   try {
     const response = await fetch(url.href)
