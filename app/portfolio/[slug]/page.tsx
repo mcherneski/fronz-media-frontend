@@ -74,7 +74,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
               }
               </div>
             </div>
-            <div className='w-full h-[100px] flex flex-row items-center justify-center'></div>
+            <div className='w-full h-[100px]'/>
         </div>
     )
 }
