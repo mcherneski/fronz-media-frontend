@@ -33,7 +33,7 @@ export default async function PortfolioPage() {
             <div className='w-full h-content flex flex-row items-start justify-center mt-20'>
                 <h1 className='w-screen text-fronzGold text-6xl text-center my-8'>Project Gallery</h1>
             </div>
-            <div className='flex h-3/4 w-3/4 flex-row items-center justify-center flex-wrap '>
+            <div className='flex h-content w-3/4 flex-row items-center justify-center flex-wrap '>
                 {
                     projects.data.map((project: any) => (
                         <Card key={project.Name} className='w-full h-[500px] sm:w-1/3 m-4 bg-transparent text-fronzGold overflow-hidden'>
@@ -45,8 +45,6 @@ export default async function PortfolioPage() {
                                 <div className='w-full h-[200px] max-h-[500px] flex justify-center items-center overflow-hidden'>
                                     <Image 
                                         src={project.media.data[0].url}
-                                        // src={'https://informed-captain-64ef5bbe8f.media.strapiapp.com' + project.media.data[0].url}
-                                        // src={'http://localhost:1337' + project.media.data[0].url}
                                         alt={project.media.data[0].alternativeText} 
                                         width={300} height={300}             
                                         objectFit='cover'
