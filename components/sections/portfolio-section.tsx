@@ -40,7 +40,7 @@ export function PortfolioSection({ sectionData }: Readonly<PortfolioSectionProps
     console.log('Featured Projects after data filter: ', featuredProjects)
     
     return (
-        <section id='portfolio' className='h-screen w-screen mx-auto flex flex-col items-center justify-center md:w-2/3 lg:mx-auto'>
+        <section id='portfolio' className='h-screen w-screen mx-auto mt-20 flex flex-col items-center justify-center md:w-2/3 lg:mx-auto'>
             <div className='w-screen text-center flex flex-row items-start justify-center m-4'>
                 <h1 className='text-fronzGold text-3xl md:text-5xl'>Featured Work</h1>
             </div>

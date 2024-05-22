@@ -31,7 +31,7 @@ export function Footer() {
                 </Button>
 
             </div> */}
-            <div className='px-4 md:px-20'>
+            <div className='px-4 md:px-20 z-30'>
                 <ContactButton />
             </div>
         </div>
