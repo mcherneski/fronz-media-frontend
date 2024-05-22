@@ -22,7 +22,7 @@ export function ServicesSection() {
             className='h-2/3 w-screen flex flex-grow flex-col items-center justify-start
             xl:w-2/3 xl:mx-auto xl:mt-24
             lg:flex-row lg:h-screen
-            md:px-8 md:h-screen md:flex-grow md:flex-row
+            md:px-8 md:h-screen md:flex-row
             sm:flex-row
             '
             id='services'

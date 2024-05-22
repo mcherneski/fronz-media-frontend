@@ -40,6 +40,7 @@ const config = {
         fronzGold: '#CA9E40',
         fronzPink: '#BF7879',
         fronzBlue: '#4984A7',
+        fronzBlack: 'rbga(0, 0, 0, 0.8)',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

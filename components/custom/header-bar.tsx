@@ -10,7 +10,7 @@ export function HeaderBar() {
     return (
         <div 
             className="
-                absolute flex flex-row justify-between items-center h-20 w-full mx-auto bg-black z-50
+                absolute flex flex-row justify-between items-center h-20 w-full mx-auto bg-fronzBlack z-50
                 sm:px-12
                 xl:bg-transparent
             ">

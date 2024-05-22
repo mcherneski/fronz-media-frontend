@@ -60,7 +60,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
               <BlocksRenderer content={content} />
             </div>
             <div className='h-content w-screen xl:w-3/4 items-center justify-center py-8 mb-4 mx-auto'>
-              <h3 className='text-fronzGold text-3xl text-center'>Gallery</h3>
+              <h3 className='text-fronzGold text-3xl text-center my-2'>Gallery</h3>
               <div className='flex flex-row flex-wrap items-center justify-center w-full'>
               {
                 media.data.map((m: any) => (
