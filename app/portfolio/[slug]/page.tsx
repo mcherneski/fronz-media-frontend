@@ -42,8 +42,8 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
     return (
         <div className='flex flex-col h-screen w-screen my-32'>
             <div className='relative t-0 flex flex-col w-screen text-center'>
-            <div className='relative h-20 text-fronzGold text-5xl'>
-              <Link href='/portfolio' className=''><IoIosArrowBack /></Link>
+            <div className='relative w-full lg:w-3/4 mx-auto h-10 flex flex-row items-center justify-start text-fronzGold text-5xl'>
+              <Link href='/portfolio' className='text-fronzGold text-5xl'><IoIosArrowBack /></Link>
             </div>
               <h1 className="text-fronzGold text-5xl">{Name}</h1>
               <h3 className='text-fronzBlue text-xl'>{client}</h3>

@@ -64,7 +64,7 @@ export default async function PortfolioPage() {
                 }
             </div>
         </main>
-        <div className='w-full h-[100px]'/>
+        <div className='w-full h-[200px]'/>
         </>
     )
 }
