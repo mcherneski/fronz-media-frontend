@@ -73,7 +73,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
               }
               </div>
             </div>
-            <div className='w-full h-[100px]'/>
+            <div className='w-full h-[50px]'/>
         </main>
     )
 }
