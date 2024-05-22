@@ -17,7 +17,7 @@ const projectsQuery = qs.stringify({
   },
   filter: {
     featured: {
-      $eq: true
+      eq: true
     }
   }
 })
@@ -51,7 +51,7 @@ export default async function Home() {
       <main className='w-screen flex flex-col'>
         <LandingSection/>
         <ServicesSection />
-        <PortfolioSection sectionData={featured}/>
+        <PortfolioSection sectionData={strapiData}/>
       </main>
   )
 }
