@@ -30,7 +30,7 @@ export default async function PortfolioPage() {
     console.log('Projects data: ', projects)
     return (
         <>
-        <main className='h-screen w-screen flex flex-col items-center justify-center flex-nowrap mb-32 mt-[150px]'>
+        <main className='h-content w-screen flex flex-col items-center justify-center flex-nowrap mb-32 mt-[150px]'>
             <div className='w-full h-1/4 flex flex-row items-start justify-center mt-20'>
                 <h1 className='w-screen text-fronzGold text-6xl text-center my-8'>Project Gallery</h1>
             </div>
@@ -64,7 +64,7 @@ export default async function PortfolioPage() {
                 }
             </div>
         </main>
-        <div className='w-full h-[200px]'/>
+        <div className='w-full h-[150px]'/>
         </>
     )
 }
