@@ -8,7 +8,6 @@ import { IoIosArrowBack } from "react-icons/io";
 
 async function getPostBySlug(slug: string) {
     const filterSlug = slug
-    console.log('Filter Slug: ', filterSlug)
     const query = qs.stringify({
         populate: {
           Name: {populate: true},
@@ -37,14 +36,14 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
 
     const {Name, client, details, media} = projectData.data[0]
     const content: BlocksContent = details
-    const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
+    // const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
     // const imageServerPrefix = 'http://localhost:1337'
 
     return (
         <div className='flex flex-col h-screen w-screen my-32'>
             <div className='relative t-0 flex flex-col w-screen text-center'>
-            <div className='absolute top-0 left-0 h-20'>
-              <Link href='/portfolio text-fronzGold text-3xl'><IoIosArrowBack /></Link>
+            <div className='relative h-20 text-fronzGold text-5xl'>
+              <Link href='/portfolio' className=''><IoIosArrowBack /></Link>
             </div>
               <h1 className="text-fronzGold text-5xl">{Name}</h1>
               <h3 className='text-fronzBlue text-xl'>{client}</h3>
