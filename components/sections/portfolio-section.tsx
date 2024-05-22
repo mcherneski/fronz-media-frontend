@@ -35,6 +35,10 @@ interface PortfolioSectionProps {
 
 export function PortfolioSection({ sectionData }: Readonly<PortfolioSectionProps>) {
     const { data } = sectionData
+    console.log('Portfolio Section Data: ', data)
+    const featuredProjects = data.filter((p) => p.featured)
+    console.log('Featured Projects after data filter: ', featuredProjects)
+    
     return (
         <section id='portfolio' className='h-screen w-screen mx-auto flex flex-col items-center justify-center md:w-2/3 lg:mx-auto'>
             <div className='w-screen text-center flex flex-row items-start justify-center m-4'>
@@ -43,7 +47,7 @@ export function PortfolioSection({ sectionData }: Readonly<PortfolioSectionProps
             <div className='h-content w-screen justify-center flex-wrap my-4 mx-auto p-8'>
                 <Carousel className='w-full h-content md:w-2/3' opts={{ align: 'center', loop: true }}>
                     <CarouselContent className=''>
-                        {data.map((p) => (
+                        {featuredProjects.map((p) => (
                             <CarouselItem key={p.id} className='basis-full md:basis-1/2'>
                                 <PortfolioCard
                                     name={p.Name}
