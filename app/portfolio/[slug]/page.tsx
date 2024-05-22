@@ -40,7 +40,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
     // const imageServerPrefix = 'http://localhost:1337'
 
     return (
-        <div className='flex flex-col h-screen w-screen my-32'>
+        <main className='flex flex-col h-content w-screen my-32'>
             <div className='relative t-0 flex flex-col w-screen text-center'>
             <div className='relative w-full lg:w-3/4 mx-auto h-10 flex flex-row items-center justify-start text-fronzGold text-5xl'>
               <Link href='/portfolio' className='text-fronzGold text-5xl'><IoIosArrowBack /></Link>
@@ -74,6 +74,6 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
               </div>
             </div>
             <div className='w-full h-[100px]'/>
-        </div>
+        </main>
     )
 }
