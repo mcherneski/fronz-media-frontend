@@ -45,7 +45,6 @@ export default async function Home() {
   const strapiData = await getStrapiData('/api/case-studies')
   if (!strapiData) { return null }
   console.log(strapiData)
-  const featured = strapiData.filter((project: any) => project.featured === true)
   
   return (
       <main className='w-screen flex flex-col'>
