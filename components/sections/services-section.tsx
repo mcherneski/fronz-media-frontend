@@ -54,7 +54,7 @@ export function ServicesSection() {
                     <AccordionItem key='nd' className='border-fronzGray font-fronzGold text-fronzGold' value='Narrative Design'>
                         <AccordionTrigger className='ml-4 text-md md:text-xl font-light text-left'>Narrative Design</AccordionTrigger>
                         <AccordionContent className='bg-transparent text-white font-light text-md py-2'>
-                            <p className='px-6 pb-4 leading-6'>We infuse your product features, vision, and community&aposs values into the broader cultural narrative, empowering investors, contributors and community members to visualize their role and impact.</p>
+                            <p className='px-6 pb-4 leading-6'>We infuse your product features, vision, and community values into the broader cultural narrative, empowering investors, contributors and community members to visualize their role and impact.</p>
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem key='emt' className='border-fronzGray font-fronzGold text-fronzGold' value='Essential Media Toolkit'>
