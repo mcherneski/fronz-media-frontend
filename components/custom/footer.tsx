@@ -10,7 +10,7 @@ export function Footer() {
     // let i = 0
 
     return (
-        <div className='absolute bottom-0 right-0 flex flex-row justify-end items-center h-20 w-screen bg-transparent'>
+        <div className='fixed bottom-0 right-0 flex flex-row justify-end items-center h-20 w-screen bg-transparent'>
             {/* <div className='flex flex-row items-center justify-center'>
 
                 <Button variant='link' size='lg' aria-label='next' onClick={() => {
