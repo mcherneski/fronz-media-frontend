@@ -1,7 +1,6 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-  /* @import url("https://use.typekit.net/xfw0yid.css"); */
 
   @layer base {
     :root {
@@ -107,8 +106,3 @@
   {
     font-family: 'Avenir-Next', sans-serif;
   }
-/* 
-  p {
-    font-family: 'proxima-nova-wide', sans-serif;
-    font-weight: 400;
-  } */

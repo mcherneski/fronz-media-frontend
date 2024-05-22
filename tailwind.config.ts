@@ -27,9 +27,6 @@ const config = {
       dropShadow: {
         'glow': '0 35px 35px rgba(73, 132, 167, .3)'
       },
-      fontFamily: {
-        'proxima-nova-wide': ['Proxima Nova Wide', 'sans-serif'],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

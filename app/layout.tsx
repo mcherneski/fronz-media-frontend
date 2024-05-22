@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} relative font-proxima-nova-wide h-screen w-screen bg-fronz-gradient-2`}>
+      <body className={`${montserrat.className} relative h-screen w-screen bg-fronz-gradient-2`}>
         <HeaderBar />
           <Suspense fallback={<div>Loading...</div>}>
             {children}
