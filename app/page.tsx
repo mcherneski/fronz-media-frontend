@@ -42,7 +42,7 @@ async function getStrapiData(path: string) {
 export default async function Home() {
   const strapiData = await getStrapiData('/api/case-studies')
   if (!strapiData) { return null }
-  console.log('Home function Featured projects data: ', strapiData)
+  
 
   return (
       <main className='w-screen flex flex-col'>

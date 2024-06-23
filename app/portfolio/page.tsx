@@ -1,3 +1,4 @@
+'use client'
 import qs from 'qs'
 import { getStrapiData } from '@/lib/utils'
 import {
@@ -27,7 +28,6 @@ const projectsQuery = qs.stringify({
 export default async function PortfolioPage() {
     const projects = await getStrapiData('/api/case-studies', projectsQuery)
     
-    console.log('Projects data: ', projects)
     return (
         <>
         <main className='h-content w-screen flex flex-col items-center justify-center flex-nowrap mb-32 mt-[150px]'>

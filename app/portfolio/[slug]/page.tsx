@@ -60,26 +60,21 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
   const projectData = await getPostBySlug(params.slug)
   if (!projectData) return null
 
-  console.log('Project Data Tags Count: ', projectData.data[0].tags.data.length)
-
   let allCaseStudies: any[] = []
   projectData.data[0].tags.data.forEach((tag: any) => {
-    console.log('Tag: ', tag)
     tag.case_studies.data.forEach((cs: any) => {
-      console.log('Case Study: ', cs)
       allCaseStudies.push(cs)
     })
   })
-  console.log('All Case Studies: ', allCaseStudies)
   const filteredCaseStudies = allCaseStudies.filter((cs: any) => cs.id !== projectData.data[0].id)
   const relatedCaseStudies = Array.from(new Map(filteredCaseStudies.map((cs: any) => [cs.id, cs])).values())
-  console.log('Related Case Studies: ', relatedCaseStudies)
+
 
   const { Name, client, details, media } = projectData.data[0]
   const content: BlocksContent = details
   const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
   // const imageServerPrefix = 'http://localhost:1337'
-  console.log('Project data: ', projectData.data[0].media)
+
 
 
   return (

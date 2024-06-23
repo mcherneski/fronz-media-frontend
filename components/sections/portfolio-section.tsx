@@ -35,9 +35,7 @@ interface PortfolioSectionProps {
 
 export function PortfolioSection({ sectionData }: Readonly<PortfolioSectionProps>) {
     const { data } = sectionData
-    console.log('Portfolio Section Data: ', data)
     const featuredProjects = data.filter((p) => p.featured)
-    console.log('Featured Projects after data filter: ', featuredProjects)
     
     return (
         <section id='portfolio' className='h-screen w-screen mx-auto mt-20 flex flex-col items-center justify-center md:w-2/3 lg:mx-auto'>

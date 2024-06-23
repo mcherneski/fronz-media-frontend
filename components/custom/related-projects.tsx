@@ -15,7 +15,6 @@ import Link from 'next/link'
 export async function RelatedProjects({ data }: { data: any }) {
 
     // console.log('Related Projects: ', related)
-    console.log('Related Projects Component Data: ', data)
     return (
         <>
             <h3 className='text-fronzGold text-3xl text-center my-2'>Related Projects</h3>
