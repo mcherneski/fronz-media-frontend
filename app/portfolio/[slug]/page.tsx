@@ -61,21 +61,22 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
   if (!projectData) return null
 
   let allCaseStudies: any[] = []
-  projectData.data[0].tags.data.forEach((tag: any) => {
-    tag.case_studies.data.forEach((cs: any) => {
-      allCaseStudies.push(cs)
+  let relatedCaseStudies: any[] = []
+  if (projectData.data[0].tags.data.length !== 0) {
+    projectData.data[0].tags.data.forEach((tag: any) => {
+      tag.case_studies.data.forEach((cs: any) => {
+        allCaseStudies.push(cs)
+      })
     })
-  })
-  const filteredCaseStudies = allCaseStudies.filter((cs: any) => cs.id !== projectData.data[0].id)
-  const relatedCaseStudies = Array.from(new Map(filteredCaseStudies.map((cs: any) => [cs.id, cs])).values())
-
+    const filteredCaseStudies = allCaseStudies.filter((cs: any) => cs.id !== projectData.data[0].id)
+    relatedCaseStudies = Array.from(new Map(filteredCaseStudies.map((cs: any) => [cs.id, cs])).values())
+  }
+  
 
   const { Name, client, details, media } = projectData.data[0]
   const content: BlocksContent = details
   const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
   // const imageServerPrefix = 'http://localhost:1337'
-
-
 
   return (
     <main className='flex flex-col items-center h-content w-screen my-32'>
