@@ -77,16 +77,21 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
   const { Name, client, details, media } = projectData.data[0]
   const content: BlocksContent = details
   const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
+  const mediaUrl = media.data && media.data.length > 0 ? imageServerPrefix + media.data[0].url : '';
+  const mediaAltText = media.data && media.data.length > 0 ? media.data[0].alternativeText : '';
   // const imageServerPrefix = 'http://localhost:1337'
 
   return (
     <main className='flex flex-col items-center h-content w-screen my-32'>
       <div className='relative t-0 flex flex-col w-full h-[350px] sm:h-[600px] sm:w-3/4 '>
+      {mediaUrl && (
         <Image
           src={imageServerPrefix + media.data[0].url} alt={media.data[0].alternativeText} width={1280} height={1000}
           // src={media.data[0].url} alt={media.data[0].alternativeText} width={1000} height={1000} 
           className='px-8 pb-4 object-cover object-center w-full overflow-hidden'
         />
+      )}
+
       </div>
       <Card className='w-3/4 bg-transparent border-transparent text-white'>
         <CardHeader>
