@@ -1,4 +1,4 @@
-'use client'
+
 import qs from 'qs'
 import { getStrapiData } from '@/lib/utils'
 import {

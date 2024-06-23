@@ -1,4 +1,4 @@
-'use client'
+
 import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer'
 import qs from 'qs'
 import { getStrapiData } from '@/lib/utils'
@@ -57,7 +57,9 @@ async function getPostBySlug(slug: string) {
 }
 
 export default async function ProjectDetails({ params }: { params: { slug: string } }) {
+  
   const projectData = await getPostBySlug(params.slug)
+
   if (!projectData || !projectData.data || projectData.data.length === 0) return null
 
   let allCaseStudies: any[] = []
