@@ -86,7 +86,8 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
       <div className='relative t-0 flex flex-col w-full h-[350px] sm:h-[600px] sm:w-3/4 '>
       {mediaUrl && (
         <Image
-          src={imageServerPrefix + media.data[0].url} alt={media.data[0].alternativeText} width={1280} height={1000}
+          src={media.data[0].url} alt={media.data[0].alternativeText} width={1280} height={1000}
+          // src={imageServerPrefix + media.data[0].url} alt={media.data[0].alternativeText} width={1280} height={1000}
           // src={media.data[0].url} alt={media.data[0].alternativeText} width={1000} height={1000} 
           className='px-8 pb-4 object-cover object-center w-full overflow-hidden'
         />
