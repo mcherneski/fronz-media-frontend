@@ -77,8 +77,8 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
 
   const { Name, client, details, media } = projectData.data[0]
   const content: BlocksContent = details
-  // const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
-  const imageServerPrefix = 'http://localhost:1337'
+  const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
+  // const imageServerPrefix = 'http://localhost:1337'
   console.log('Project data: ', projectData.data[0].media)
 
 

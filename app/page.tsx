@@ -22,8 +22,8 @@ const featuredQuery = qs.stringify({
 })
 
 async function getStrapiData(path: string) {
-  // const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
-  const baseUrl = 'http://localhost:1337'
+  const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
+  // const baseUrl = 'http://localhost:1337'
   const url = new URL(path, baseUrl)
   url.search = featuredQuery
 
@@ -31,8 +31,7 @@ async function getStrapiData(path: string) {
     const response = await fetch(url.href)
     const data = await response.json()
     const flattenedData = flattenAttributes(data)
-    console.log('Home Page Flattened Data: ', flattenedData)
-
+    
     return flattenedData
   } catch (error) {
     console.error(error)

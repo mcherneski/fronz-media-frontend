@@ -27,7 +27,7 @@ export async function RelatedProjects({ data }: { data: any }) {
                             <Link href={`/portfolio/${project.slug}`}>
                             <CardHeader>
                                 <Image
-                                    src={'http://localhost:1337' + project.media.data[0].url}
+                                    src={project.media.data[0].url}
                                     alt={project.media.data[0].alternativeText}
                                     width={350}
                                     height={300}

@@ -46,7 +46,8 @@ export default async function PortfolioPage() {
                                 <div className='w-full h-[200px] max-h-[500px] flex justify-center items-center overflow-hidden'>
                                     <Image
                                         // Make SRC just project.media.data[0].url in production 
-                                        src={'http://localhost:1337' + project.media.data[0].url}
+                                        // src={'http://localhost:1337' + project.media.data[0].url}
+                                        src={project.media.data[0].url}
                                         alt={project.media.data[0].alternativeText} 
                                         width={300} height={300}             
                                         objectFit='cover'
