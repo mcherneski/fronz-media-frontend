@@ -25,7 +25,7 @@ import {
                 <CardDescription>{client}</CardDescription>
             </CardHeader>
             <CardContent className='w-full h-full flex flex-col items-center justify-center'>
-                <Image src={imageUrl} alt={name} width={300} height={169} />
+                <Image src={imageUrl} alt={`Image for ${name}`} width={300} height={169} />
                 <p className='w-full text-center  text-fronzBlue line-clamp-2'>{description}</p>
             </CardContent>
             <CardFooter>

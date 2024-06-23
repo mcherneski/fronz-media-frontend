@@ -6,25 +6,24 @@ import { ServicesSection } from '@/components/sections/services-section'
 import { PortfolioSection } from '@/components/sections/portfolio-section'
 
 const featuredQuery = qs.stringify({
-  populate: {
-    Name: { populate: true },
-    client: { populate: true },
-    slug: { populate: true },
-    short_description: { populate: true },
-    featured: { populate: true },
-    details: { populate: true },
-    media: { fields: ['url', 'alternativeText'] },
-  },
-  filter: {
-    featured: {
-      $eq: true
-    }
-  }
+  
+    filters: {
+      featured: {
+        $eq: true,
+      },
+    },
+    populate: {
+      Name: {populate: true},
+      slug: {populate: true},
+      featured: {populate: true},
+      media: {fields: ['url', 'alternativeText']},
+    },
+  
 })
 
 async function getStrapiData(path: string) {
-  const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
-  // const baseUrl = 'http://localhost:1337'
+  // const baseUrl = 'https://informed-captain-64ef5bbe8f.strapiapp.com'
+  const baseUrl = 'http://localhost:1337'
   const url = new URL(path, baseUrl)
   url.search = featuredQuery
 
@@ -45,7 +44,7 @@ export default async function Home() {
   const strapiData = await getStrapiData('/api/case-studies')
   if (!strapiData) { return null }
   console.log('Home function Featured projects data: ', strapiData)
-  
+
   return (
       <main className='w-screen flex flex-col'>
         <LandingSection/>
