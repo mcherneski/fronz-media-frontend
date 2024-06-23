@@ -58,11 +58,12 @@ async function getPostBySlug(slug: string) {
 
 export default async function ProjectDetails({ params }: { params: { slug: string } }) {
   const projectData = await getPostBySlug(params.slug)
-  if (!projectData) return null
+  if (!projectData || !projectData.data || projectData.data.length === 0) return null
 
   let allCaseStudies: any[] = []
   let relatedCaseStudies: any[] = []
-  if (projectData.data[0].tags.data.length !== 0) {
+
+  if (projectData.data[0].tags && projectData.data[0].tags.data.length) {
     projectData.data[0].tags.data.forEach((tag: any) => {
       tag.case_studies.data.forEach((cs: any) => {
         allCaseStudies.push(cs)
