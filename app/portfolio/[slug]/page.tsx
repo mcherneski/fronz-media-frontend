@@ -82,7 +82,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
   const mediaUrl = media.data && media.data.length > 0 ? imageServerPrefix + media.data[0].url : '';
   const mediaAltText = media.data && media.data.length > 0 ? media.data[0].alternativeText : '';
   // const imageServerPrefix = 'http://localhost:1337'
-
+  console.log('Media Data: ', media.data)
   return (
     <main className='flex flex-col items-center h-content w-screen my-32'>
       <div className='relative t-0 flex flex-col w-full h-[350px] sm:h-[600px] sm:w-3/4 '>
@@ -137,7 +137,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
                 media.data.map((m: any) => (
                   <Image
                     key={m.id}
-                    src={imageServerPrefix + m.url}
+                    src={m.url}
                     alt={m.alternativeText}
                     width={500}
                     height={300}
@@ -153,7 +153,9 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
       </div>
 
       <div className='w-full'>
-        <RelatedProjects data={relatedCaseStudies} />
+        {relatedCaseStudies.length > 0 && (
+          <RelatedProjects data={relatedCaseStudies} />  
+        )}
       </div>
 
     </main>
