@@ -27,7 +27,9 @@ const projectsQuery = qs.stringify({
 
 export default async function PortfolioPage() {
     const projects = await getStrapiData('/api/case-studies', projectsQuery)
-
+    // projects.data.map((project: any) => {
+    //     const mainImage = project.media.data.find((image: any) => image.)
+    // })
     return (
         <>
             <main className='h-content w-screen flex flex-col items-center justify-center flex-nowrap mb-32 mt-[150px]'>

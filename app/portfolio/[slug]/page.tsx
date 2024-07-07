@@ -3,14 +3,11 @@ import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-rendere
 import qs from 'qs'
 import { getStrapiData } from '@/lib/utils'
 import Image from 'next/image'
-import Link from 'next/link'
 import { RelatedProjects } from '@/components/custom/related-projects'
 import {
   Card,
   CardHeader,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardTitle,
 } from '@/components/ui/card'
 
@@ -75,12 +72,12 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
     relatedCaseStudies = Array.from(new Map(filteredCaseStudies.map((cs: any) => [cs.id, cs])).values())
   }
   
-
   const { Name, client, details, media } = projectData.data[0]
   const content: BlocksContent = details
   const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
   const mediaUrl = media.data && media.data.length > 0 ? imageServerPrefix + media.data[0].url : '';
-  const mediaAltText = media.data && media.data.length > 0 ? media.data[0].alternativeText : '';
+  console.log('Media Data: ', media.data)
+  // const mediaAltText = media.data && media.data.length > 0 ? media.data[0].alternativeText : '';
   // const imageServerPrefix = 'http://localhost:1337'
   console.log('Media Data: ', media.data)
   return (
