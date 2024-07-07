@@ -58,6 +58,9 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
   const projectData = await getPostBySlug(params.slug)
 
   if (!projectData || !projectData.data || projectData.data.length === 0) return null
+  console.log('Project Data: ', projectData)
+  console.log('Project Data 0: ', projectData.data[0])
+  console.log('Project Data Media: ', projectData.data[0].media)
 
   let allCaseStudies: any[] = []
   let relatedCaseStudies: any[] = []
