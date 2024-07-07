@@ -27,6 +27,7 @@ const projectsQuery = qs.stringify({
 
 export default async function PortfolioPage() {
     const projects = await getStrapiData('/api/case-studies', projectsQuery)
+    console.log('All projects: ', projects)
     
     projects.data.forEach((project: any) => {
         console.log('Project Data: ', project)
