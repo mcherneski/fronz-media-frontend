@@ -75,11 +75,11 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
   const { Name, client, details, media } = projectData.data[0]
   const content: BlocksContent = details
   const imageServerPrefix = 'https://informed-captain-64ef5bbe8f.media.strapiapp.com'
-  const mediaUrl = media.data && media.data.length > 0 ? imageServerPrefix + media.data[0].url : '';
+  const mediaUrl = media.data ? imageServerPrefix + media.data[0].url : '';
   console.log('Media Data: ', media.data)
   // const mediaAltText = media.data && media.data.length > 0 ? media.data[0].alternativeText : '';
   // const imageServerPrefix = 'http://localhost:1337'
-  console.log('Media Data: ', media.data)
+  
   return (
     <main className='flex flex-col items-center h-content w-screen my-32'>
       <div className='relative t-0 flex flex-col w-full h-[350px] sm:h-[600px] sm:w-3/4 '>
