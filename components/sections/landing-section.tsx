@@ -27,7 +27,7 @@ interface HeroSectionProps {
 export function LandingSection() {
     // const {Hero_Header, Hero_Image, Hero_Header_Scroll} = data
     return (
-        <section id='home' className='h-screen w-screen'>
+        <section id='home' className='h-screen w-screen home'>
             <div className='
                 flex flex-col h-2/3 items-center justify-center px-10 mt-10
                 xl:w-2/3 xl:mx-auto
