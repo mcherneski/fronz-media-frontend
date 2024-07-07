@@ -125,7 +125,7 @@ export default async function ProjectDetails({ params }: { params: { slug: strin
             </>
           )
         }
-        {media.data.length > 1 && (
+        {media.data && (
           <>
             <h3 className='text-fronzGold text-3xl text-center my-2'>Image Gallery</h3>
             <div className='flex flex-row flex-wrap items-center justify-center w-full'>
