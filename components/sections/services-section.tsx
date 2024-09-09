@@ -19,10 +19,10 @@ export function ServicesSection() {
 
     return (
         <section
-            className='h-2/3 w-screen flex flex-grow flex-col items-center justify-start
+            className='h-screen w-screen flex flex-grow flex-col items-center justify-start
             xl:w-2/3 xl:mx-auto xl:mt-24
-            lg:flex-row lg:h-screen
-            md:px-8 md:h-screen md:flex-row
+            lg:flex-row
+            md:px-8 md:flex-row
             sm:flex-row
             '
             id='services'
