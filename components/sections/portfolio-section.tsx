@@ -44,7 +44,7 @@ export function PortfolioSection({
       id="portfolio"
       className="h-screen w-screen mx-auto flex flex-col items-center justify-center md:w-2/3"
     >
-      <div className="text-center flex flex-row items-center justify-center my-32 z-20">
+      <div className="text-center flex flex-row items-center justify-center mb-32 z-20">
         <Link href="/portfolio">
           <h1 className="text-3xl text-center text-fronzGold p-4 border-2 border-fronzGold hover:border-fronzBlue rounded-sm">
             View Project Gallery
